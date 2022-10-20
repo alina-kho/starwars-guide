@@ -1,0 +1,14 @@
+.movie-card {
+  background-color: #ffc52c;
+  color: black;
+  width: 20vw;
+  height: 120px;
+  border-radius: 5px;
+  padding: 2px 10px;
+
+  h3,
+  p {
+    line-height: 1em;
+    margin-bottom: 0;
+  }
+}

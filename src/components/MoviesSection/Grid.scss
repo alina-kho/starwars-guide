@@ -1,0 +1,47 @@
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 60vw;
+  min-height: 50vh;
+
+  input {
+    height: 1.8em;
+    padding: 2px 2px;
+    border: 3px solid #ffc52c;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.1em;
+    width: 70%;
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .grid-wrapper {
+    height: 60vh;
+    .grid {
+      margin-top: 10px;
+      min-height: 40vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto;
+      gap: 5px 5px;
+    }
+
+    .not-found {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 150px;
+      }
+    }
+
+    .white-text {
+      color: white;
+    }
+  }
+}
