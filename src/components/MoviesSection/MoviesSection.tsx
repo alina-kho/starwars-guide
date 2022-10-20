@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Movie } from "../../models/Movies";
 import { getMovies } from "../../services/movies";
 import { MovieCard } from "../MovieCard/MovieCard";
-import "./Grid.scss";
+import "../Grid.scss";
 import { NothingFound } from "../NothingFound";
 
 export const MoviesSection = () => {
@@ -42,7 +42,7 @@ export const MoviesSection = () => {
             {filteredMovies.length === 0 ? (
               <NothingFound />
             ) : (
-              <div className="grid">
+              <div className="grid grid-movies">
                 {filteredMovies.map((movie) => (
                   <MovieCard key={movie.episode_id} movie={movie} />
                 ))}

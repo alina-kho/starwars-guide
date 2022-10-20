@@ -1,10 +1,13 @@
-.movie-card {
+.card {
   background-color: #ffc52c;
   color: black;
-  width: 20vw;
-  height: 120px;
   border-radius: 5px;
   padding: 2px 10px;
+  height: 110px;
+
+  .movie-card {
+    width: 20vw;
+  }
 
   h3,
   p {
