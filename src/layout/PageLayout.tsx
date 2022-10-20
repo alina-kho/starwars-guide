@@ -8,9 +8,11 @@ interface PageLayoutProps {
 
 export const PageLayout: FC<PageLayoutProps> = ({ title, children }) => {
   return (
-    <div className="container">
-      <h1>{title}</h1>
-      {children}
-    </div>
+    <main>
+      <div className="container">
+        <h1>{title}</h1>
+        {children}
+      </div>
+    </main>
   );
 };

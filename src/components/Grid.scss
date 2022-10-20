@@ -4,7 +4,6 @@
   justify-content: center;
   align-items: center;
   width: 60vw;
-  min-height: 50vh;
 
   input {
     height: 1.8em;
@@ -19,14 +18,19 @@
   }
 
   .grid-wrapper {
-    height: 60vh;
     .grid {
       margin-top: 10px;
-      min-height: 40vh;
       display: grid;
-      grid-template-columns: 1fr 1fr;
       grid-template-rows: auto;
       gap: 5px 5px;
+    }
+
+    .grid-movies {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-characters {
+      grid-template-columns: 1fr 1fr 1fr;
     }
 
     .not-found {
