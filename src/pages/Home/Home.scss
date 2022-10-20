@@ -1,0 +1,36 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img {
+    padding-top: 20px;
+    width: 30vw;
+  }
+  h1 {
+    margin-top: 50px;
+    font-size: 2em;
+    color: white;
+  }
+
+  .hp-buttons {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    justify-content: center;
+    gap: 10px;
+
+    button {
+      font-family: "Oswald", sans-serif;
+      font-size: 1.5em;
+      background-color: yellow;
+      border: 5px solid #ffc52c;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #ffc52c;
+        border: 5px solid yellow;
+      }
+    }
+  }
+}
