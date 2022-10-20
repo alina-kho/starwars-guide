@@ -3,7 +3,7 @@ import { Movie } from "../../models/Movies";
 import { getMovies } from "../../services/movies";
 import { MovieCard } from "../MovieCard/MovieCard";
 import "./Grid.scss";
-import babyYoda from "../../assets/baby-yoda.png";
+import { NothingFound } from "../NothingFound";
 
 export const MoviesSection = () => {
   const [inputValue, setInputValue] = useState("");
@@ -40,10 +40,7 @@ export const MoviesSection = () => {
         ) : (
           <>
             {filteredMovies.length === 0 ? (
-              <div className="not-found">
-                <p className="white-text">Nothing found...</p>
-                <img src={babyYoda} alt="baby Yoda" />
-              </div>
+              <NothingFound />
             ) : (
               <div className="grid">
                 {filteredMovies.map((movie) => (
