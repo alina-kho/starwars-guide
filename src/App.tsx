@@ -1,7 +1,7 @@
 import React from "react";
-import "./App.css";
+import "./App.scss";
 import { BrowserRouter, Outlet, Route, Routes } from "react-router-dom";
-import { Home } from "./pages/Home";
+import { Home } from "./pages/Home/Home";
 import { Navbar } from "./components/Navbar/Navbar";
 import { Movies } from "./pages/Movies";
 import { Characters } from "./pages/Characters";
@@ -19,15 +19,17 @@ const NavOutlet = () => {
 
 function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path={Paths.HOME} element={<Home />} />
-        <Route element={<NavOutlet />}>
-          <Route path={Paths.MOVIES} element={<Movies />} />
-          <Route path={Paths.CHARACTERS} element={<Characters />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <div className="app">
+      <BrowserRouter>
+        <Routes>
+          <Route path={Paths.HOME} element={<Home />} />
+          <Route element={<NavOutlet />}>
+            <Route path={Paths.MOVIES} element={<Movies />} />
+            <Route path={Paths.CHARACTERS} element={<Characters />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
 
