@@ -13,3 +13,20 @@ export const getCharacters = async () => {
     return [];
   }
 };
+
+/* The same is also possible with fetch which is already included in React:
+
+
+const getMoviesWithFetch = () => {
+  fetch("https://swapi.dev/api/people/")
+    .then((response) => {
+      if (response.ok) {
+        return response.json();
+      }
+    })
+    .catch((e) => {
+      return e;
+    });
+};
+
+*/
