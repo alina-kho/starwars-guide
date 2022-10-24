@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { Character } from "../models/Characters";
-import { getCharacters } from "../services/characters";
-import { NothingFound } from "./NothingFound";
+import { Character } from "../../models/Characters";
+import { getCharacters } from "../../services/characters";
+import { NothingFound } from "../NothingFound";
 import "./Grid.scss";
-import { CharacterCard } from "./CharacterCard";
+import { CharacterCard } from "../Cards/CharacterCard";
 
 export const CharactersSection = () => {
   const [inputValue, setInputValue] = useState("");
@@ -17,13 +17,18 @@ export const CharactersSection = () => {
     setIsLoading(false);
   };
 
+  //One way to apply client-side filtering - without using useMemo hook since it is a smaller project
+  //For bigger projects, I suggest using useMemo not to load the app with unneccessary renders and calls (see the Movies Section component)
   const filteredCharacters = characters.filter((character) =>
     character.name.toLowerCase().includes(inputValue)
   );
 
+  // In React 18, useEffect renders twice in the Strict mode
+  // For bigger projects with more data/calls in the flow, it might be reasonable consider aborting the second render
   useEffect(() => {
     fetchMovies();
   }, []);
+
   return (
     <div className="centered">
       <input

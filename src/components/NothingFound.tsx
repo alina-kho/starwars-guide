@@ -1,6 +1,6 @@
 import React from "react";
 import babyYoda from "../assets/baby-yoda.png";
-import "./Grid.scss";
+import "./Sections/Grid.scss";
 
 export const NothingFound = () => {
   return (

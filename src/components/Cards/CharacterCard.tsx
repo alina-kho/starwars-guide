@@ -1,6 +1,6 @@
 import React, { FC } from "react";
-import { Character } from "../models/Characters";
-import "./MovieCard/MovieCard.scss";
+import { Character } from "../../models/Characters";
+import "./Cards.scss";
 
 interface CharacterCardProps {
   character: Character;
